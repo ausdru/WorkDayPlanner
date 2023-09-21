@@ -1,14 +1,14 @@
 # WorkDayPlanner
 
 ## Live Link:
-[AD_WorkdayPlanner]()
+[AD_WorkdayPlanner2023](https://ausdru.github.io/WorkdayPlanner2023/)
 
 ## Description:
 The motivation behind this project was to build an application that works as a daily planner. The application needed to utilize 'Day.js' library for date/time formatting, and be built using Jquery, HTML, JavaScript, and CSS.
 
 ## Usage:
-![screenshot1](assets\ss1.png)
-![screenshot2](assets\ss2.png)
+![screenshot1](./assets/ss1.png)
+![screenshot2](./assets/ss2.png)
 
 ## License:
 MIT License
