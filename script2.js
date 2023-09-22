@@ -28,31 +28,31 @@ saveBtn.on("click", function(e) {
     e.preventDefault();
     confirmationMsg.html("Successfully added to planner with <code> localStorage </code>!");
     confirmationMsg.attr("style", "text-align: center; font-size: 15px");
-    hrNineVal = hrNineText.val();
-    hrTenVal = hrTenText.val();
-    hrElevenVal = hrElevenText.val();
-    hrTwelveVal =  hrTwelveText.val();
-    hrThirteenVal = hrThirteenText.val(); 
-    hrFourteenVal = hrFourteenText.val(); 
-    hrFifteenVal = hrFifteenText.val();
-    hrSixteenVal = hrSixteenText.val();
-    hrSeventeenVal = hrSeventeenText.val();
-    localStorage.setItem("hour09", hourNineVal);
-    localStorage.setItem("hour10", hourTenVal);
-    localStorage.setItem("hour11", hourElevenVal);
-    localStorage.setItem("hour12", hourTwelveVal);
-    localStorage.setItem("hour13", hourThirteenVal);
-    localStorage.setItem("hour14", hourFourteenVal);
-    localStorage.setItem("hour15", hourFifteenVal);
-    localStorage.setItem("hour16", hourSixteenVal);
-    localStorage.setItem("hour17", hourSeventeenVal);
+    var hrNineVal = hrNineText.val();
+    var hrTenVal = hrTenText.val();
+    var hrElevenVal = hrElevenText.val();
+    var hrTwelveVal =  hrTwelveText.val();
+    var hrThirteenVal = hrThirteenText.val(); 
+    var hrFourteenVal = hrFourteenText.val(); 
+    var hrFifteenVal = hrFifteenText.val();
+    var hrSixteenVal = hrSixteenText.val();
+    var hrSeventeenVal = hrSeventeenText.val();
+    localStorage.setItem("hour09", hrNineVal);
+    localStorage.setItem("hour10", hrTenVal);
+    localStorage.setItem("hour11", hrElevenVal);
+    localStorage.setItem("hour12", hrTwelveVal);
+    localStorage.setItem("hour13", hrThirteenVal);
+    localStorage.setItem("hour14", hrFourteenVal);
+    localStorage.setItem("hour15", hrFifteenVal);
+    localStorage.setItem("hour16", hrSixteenVal);
+    localStorage.setItem("hour17", hrSeventeenVal);
 });
 
 // When page loads, place all items in local storage to corresponding elements
 // on the page.
 // --------------------------------------------------------------------------
 function init() {
-    hrNineText.text(localStorage.getItem("hour09"));
+    hrNineText.text(localStorage.getItem("hour09")); // Use .val() to set textarea values
     hrTenText.text(localStorage.getItem("hour10"));
     hrElevenText.text(localStorage.getItem("hour11"));
     hrTwelveText.text(localStorage.getItem("hour12"));
@@ -63,7 +63,8 @@ function init() {
     hrSeventeenText.text(localStorage.getItem("hour17"));
 };
 
-init()
+init();
+
 
 // Finding value for the current hour.
 // --------------------------------------------------------------------------
@@ -86,5 +87,5 @@ for (var i = 0; i < timeBlock.length; i++) {
         timeBlock[i].classList.remove("present");
         timeBlock[i].classList.remove("future");
         timeBlock[i].classList.add("past");
-    }
+    };
 };
