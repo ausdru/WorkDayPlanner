@@ -63,7 +63,7 @@ function init() {
     hrSeventeenText.text(localStorage.getItem("hour17"));
 };
 
-init();
+init()
 
 
 // Finding value for the current hour.
